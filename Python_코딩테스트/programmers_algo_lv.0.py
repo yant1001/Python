@@ -68,3 +68,21 @@ def solution(n):
 def solution(num1, num2):
     answer = num1 + num2
     return answer
+
+
+# 양꼬치
+def solution(n, k):
+    if n < 10:
+        answer = (n*12000) + (k*2000)
+    else:
+        answer = (n*12000) + (k*2000) - (n//10)*2000
+    return answer
+
+
+# 양꼬치
+def solution(n, k):
+    if n < 10:
+        answer = (n*12000) + (k*2000)
+    else:
+        answer = (n*12000) + (k*2000) - (n//10)*2000
+    return answer
