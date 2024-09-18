@@ -86,3 +86,50 @@ def solution(n, k):
     else:
         answer = (n*12000) + (k*2000) - (n//10)*2000
     return answer
+
+
+# 세균 증식
+def solution(n, t):
+    for i in range(1, t+1):
+        n *= 2
+    return n
+
+
+# 편지
+def solution(message):
+    answer = len(message)*2
+    return answer
+
+
+# 피자 나눠 먹기 (3)
+def solution(slice, n):
+    if slice <= n:
+        answer = n // slice
+        if (n % slice) != 0:
+            answer += 1
+    else:
+        answer = 1
+    return answer
+
+
+# 짝수 홀수 개수
+def solution(num_list):
+    e = 0
+    o = 0
+    for num in num_list:
+        if num % 2 == 0:
+            e += 1
+        else:
+            o += 1
+        answer = [e, o]
+    return answer
+
+
+# 제곱수 판별하기
+def solution(n):
+    i = n**(1/2)
+    if i % 1 == 0:
+        answer = 1
+    else:
+        answer = 2
+    return answer
