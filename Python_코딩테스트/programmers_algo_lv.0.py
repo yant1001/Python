@@ -133,3 +133,77 @@ def solution(n):
     else:
         answer = 2
     return answer
+
+
+# 배열의 평균값
+def solution(numbers):
+    answer = sum(numbers) / len(numbers)
+    return answer
+
+
+# 삼각형의 완성조건(1)
+def solution(sides):
+    if max(sides) < (sum(sides) - max(sides)):
+        answer = 1
+    else:
+        answer = 2
+    return answer
+
+
+# 중복된 숫자 개수
+def solution(array, n):
+    list = []
+    for i in array:
+        if i == n:
+            list.append(i)
+    answer = len(list)
+    return answer
+
+
+# 머쓱이보다 키 큰 사람
+def solution(array, height):
+    list = []
+    for i in array:
+        if i > height:
+            list.append(i)
+    answer = len(list)
+    return answer
+
+
+# 배열 두배 만들기
+def solution(numbers):
+    answer = []
+    for num in numbers:
+        answer.append(num*2)
+    return answer
+
+
+# 중앙값 구하기
+import math
+
+def solution(array):
+    array.sort()
+    center = math.trunc(len(array)/2)
+    answer = array[center]
+    return answer
+
+
+# 짝수는 싫어요
+def solution(n):
+    answer = []
+    for i in range(1, n+1):
+        if i % 2 == 1:
+            answer.append(i)
+    return answer
+
+
+# 피자 나눠 먹기 (1)
+def solution(n):
+    if n >= 7:
+        answer = n // 7
+        if n % 7 != 0:
+            answer = (n // 7) + 1
+    else:
+        answer = 1
+    return answer
+
