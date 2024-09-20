@@ -207,3 +207,47 @@ def solution(n):
         answer = 1
     return answer
 
+
+# 옷가게 할인 받기
+def solution(price):
+    if price >= 500000:
+        answer = price * (1 - 0.2)
+    elif price >= 300000:
+        answer = price * (1 - 0.1)
+    elif price >= 100000:
+        answer = price * (1 - 0.05)
+    else:
+        answer = price
+    return int(answer)
+
+
+# 아이스 아메리카노
+def solution(money):
+    answer = []
+    if money >= 5500:
+        answer.append(money // 5500)
+        answer.append(money % 5500)
+    else:
+        answer.append(0)
+        answer.append(money)
+    return answer
+
+
+# 개미 군단
+def solution(hp):
+    answer = 0
+    if hp >= 5:
+        if hp % 5 == 0:
+            answer = hp // 5
+        elif hp % 5 <= 2:
+            answer = (hp // 5) + (hp % 5)
+        elif hp % 5 == 3:
+            answer = (hp // 5) + 1
+        elif hp % 5 == 4:
+            answer = (hp // 5) + 2
+    else:
+        if hp % 3 == 0:
+            answer = hp // 3
+        else:
+            answer = (hp // 3) + (hp % 3)
+    return answer
