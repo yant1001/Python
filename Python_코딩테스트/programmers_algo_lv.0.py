@@ -251,3 +251,15 @@ def solution(hp):
         else:
             answer = (hp // 3) + (hp % 3)
     return answer
+
+
+# 숨어있는 숫자의 덧셈 (1)
+#  ord: 한 문자를 유니코드로 변환 (자연수의 유니코드는 47~58)
+def solution(my_string):
+    my_string = list(my_string)
+    answer = []
+    for i in range(len(my_string)):
+        if 47 <= ord(my_string[i]) <= 58:
+            answer.append(int(my_string[i]))
+    answer = sum(answer)
+    return answer
